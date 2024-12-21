@@ -20,7 +20,7 @@
     <div v-else class="now-playing" :class="getNowPlayingClass()">
       <div class="now-playing__idle-heading">
         <img
-          src="public/logo-simitci-café.png"
+          src="https://github.com/B0YTR/Nowify/blob/00d55a9d818ed2b7ebd96a1c3669e7cf6ebefe90/public/logo-simitci-caf%C3%A9.png"
           alt="Simitci Café Logo"
           class="now-playing__logo"
         />
