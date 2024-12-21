@@ -46,12 +46,15 @@
   &--active {
     align-items: center;
     justify-content: center;
+    background-color: var(--colour-background-now-playing);
   }
 
   &--idle {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: var(--background-image-now-playing) no-repeat center center;
+    background-size: cover;
   }
 
   @media only screen and (min-width: 767px) {
