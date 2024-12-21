@@ -18,7 +18,7 @@
       </div>
     </div>
     <div v-else class="now-playing" :class="getNowPlayingClass()">
-      <h1 class="now-playing__idle-heading">No music is playing 😔</h1>
+      <h1 class="now-playing__idle-heading">Simitci Café</h1>
     </div>
   </div>
 </template>
@@ -43,7 +43,8 @@ export default {
       playerResponse: {},
       playerData: this.getEmptyPlayer(),
       colourPalette: '',
-      swatches: []
+      swatches: [],
+      defaultBackgroundImage: 'public/background.jpg'
     }
   },
 
@@ -179,16 +180,32 @@ export default {
      * Set the stylings of the app based on received colours.
      */
     setAppColours() {
-      document.documentElement.style.setProperty(
-        '--color-text-primary',
-        this.colourPalette.text
-      )
+  if (this.player.playing) {
+    // Appliquer les couleurs générées
+    document.documentElement.style.setProperty(
+      '--color-text-primary',
+      this.colourPalette.text
+    )
 
-      document.documentElement.style.setProperty(
-        '--colour-background-now-playing',
-        this.colourPalette.background
-      )
-    },
+    document.documentElement.style.setProperty(
+      '--colour-background-now-playing',
+      this.colourPalette.background
+    )
+    document.documentElement.style.removeProperty(
+      '--background-image-now-playing'
+    )
+  } else {
+    // Utiliser l'image de fond par défaut
+    document.documentElement.style.setProperty(
+      '--background-image-now-playing',
+      `url(${this.defaultBackgroundImage})`
+    )
+    document.documentElement.style.removeProperty(
+      '--colour-background-now-playing'
+    )
+  }
+},
+
 
     /**
      * Handle newly updated Spotify Tracks.
