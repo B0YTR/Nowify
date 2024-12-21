@@ -19,7 +19,11 @@
     </div>
     <div v-else class="now-playing" :class="getNowPlayingClass()">
       <div class="now-playing__idle-heading">
-        <img src="public/logo-simitci-café.png" alt="Simitci Café Logo" class="now-playing__logo" />
+        <img
+          src='public/logo-simitci-café.png'
+          alt='Simitci Café Logo'
+          class='now-playing__logo'
+        />
       </div>
     </div>
   </div>
@@ -226,7 +230,7 @@ export default {
        * Player is active, but user has paused.
        */
 
-      setAppColours()
+      this.setAppColours()
       
       if (this.playerResponse.is_playing === false) {
         this.playerData = this.getEmptyPlayer()
