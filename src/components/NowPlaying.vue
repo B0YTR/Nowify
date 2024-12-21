@@ -50,7 +50,7 @@ export default {
       playerData: this.getEmptyPlayer(),
       colourPalette: '',
       swatches: [],
-      defaultBackgroundImage: "public/background.jpg"
+      defaultBackgroundImage: "https://github.com/B0YTR/Nowify/blob/b58826c55d4ae7b0e7cc137049aca842081afcbc/public/background.jpg"
     }
   },
 
