@@ -20,9 +20,9 @@
     <div v-else class="now-playing" :class="getNowPlayingClass()">
       <div class="now-playing__idle-heading">
         <img
-          src='public/logo-simitci-café.png'
-          alt='Simitci Café Logo'
-          class='now-playing__logo'
+          src="public/logo-simitci-café.png"
+          alt="Simitci Café Logo"
+          class="now-playing__logo"
         />
       </div>
     </div>
@@ -50,7 +50,7 @@ export default {
       playerData: this.getEmptyPlayer(),
       colourPalette: '',
       swatches: [],
-      defaultBackgroundImage: 'public/background.jpg'
+      defaultBackgroundImage: "public/background.jpg"
     }
   },
 
