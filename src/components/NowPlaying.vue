@@ -223,6 +223,9 @@ export default {
       /**
        * Player is active, but user has paused.
        */
+
+      setAppColours()
+      
       if (this.playerResponse.is_playing === false) {
         this.playerData = this.getEmptyPlayer()
 
