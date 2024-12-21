@@ -20,7 +20,7 @@
     <div v-else class="now-playing" :class="getNowPlayingClass()">
       <div class="now-playing__idle-heading">
         <img
-          src="https://github.com/B0YTR/Nowify/blob/00d55a9d818ed2b7ebd96a1c3669e7cf6ebefe90/public/logo-simitci-caf%C3%A9.png"
+          src="logo-simitci-café.png"
           alt="Simitci Café Logo"
           class="now-playing__logo"
         />
@@ -50,7 +50,7 @@ export default {
       playerData: this.getEmptyPlayer(),
       colourPalette: '',
       swatches: [],
-      defaultBackgroundImage: "https://github.com/B0YTR/Nowify/blob/b58826c55d4ae7b0e7cc137049aca842081afcbc/public/background.jpg"
+      defaultBackgroundImage: "background.jpg"
     }
   },
 
